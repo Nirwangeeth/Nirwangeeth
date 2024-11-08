@@ -132,15 +132,15 @@
         width: 100%;
       }
 
-      /* Optional: Style for the menu button if needed */
+
       .menu-btn {
-        display: none; /* Hide menu button on desktop view */
+        display: none; 
       }
 
-      /* Add media query for responsive design */
+
       @media (max-width: 768px) {
         .nav-links {
-          display: none; /* Hide links on mobile */
+          display: none;
         }
 
         .menu-btn {
@@ -988,7 +988,7 @@
     </footer>
 
     <script>
-      // Smooth scrolling for navigation links
+      
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -1007,17 +1007,16 @@
           navLinks.style.display === "flex" ? "none" : "flex";
       });
 
-      // Form submission handling
+
       document
         .getElementById("contactForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
-          // Add your form submission logic here
+   
           alert("Thank you for your message! We will get back to you soon.");
           this.reset();
         });
 
-      // Intersection Observer for scroll animations
       const observerOptions = {
         threshold: 0.1,
       };
@@ -1042,18 +1041,15 @@
           observer.observe(el);
         });
 
-        // desable copy paste for this page
         document.onselectstart = function () {
           return false;
         };
 
-        // Disable right-click context menu
         document.addEventListener("contextmenu", function (event) {
           event.preventDefault();
           alert("You can't do that on this website.");
         });
 
-        // ping desabled for this page
         // window.onbeforeunload = function () {
         //   return false;
         // };
